@@ -11,6 +11,12 @@ provider "azurerm" {
     client_secret = "${var.client_secret}"
 }
 
+#Create resource group
+resource "azurerm_resource_group" "myterraformgroup" {
+    name     = "DmitrysGroup"
+    location = "eastus"
+ }
+
 # Give execute privilege
 resource "azurerm_resource_group" "privs" {
   name     = "DmitrysGroup"
@@ -23,11 +29,6 @@ resource "azurerm_resource_group" "privs" {
   }
 }
 
-#Create resource group
-resource "azurerm_resource_group" "myterraformgroup" {
-    name     = "DmitrysGroup"
-    location = "eastus"
- }
 
 #Create VM
 resource "azurerm_resource_group" "VM" {
