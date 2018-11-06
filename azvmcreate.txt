@@ -1,1 +1,1 @@
-az vm create --resource-group DmitrysGroup --name DmitrysVM --image UbuntuLTS --admin-username dmitry --admin-password or2cLe1_23456789 --custom-data cloud-init-jenkins.txt
+az vm create --resource-group DmitrysGroup --name DmitrysVM --image UbuntuLTS --admin-username dmitry --admin-password or2cLe1!23456789 --custom-data cloud-init-jenkins.txt
