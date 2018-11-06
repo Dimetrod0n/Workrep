@@ -22,6 +22,7 @@ resource "azurerm_resource_group" "privs" {
   name     = "DmitrysGroup"
   location = "eastus"
   provisioner "local-exec" {
+    command = "cp /home/dmitry/WorkDir/terraform.tfvars /home/dmitry/WorkDir/Workrep/"
     command = "chmod +x /home/dmitry/WorkDir/Workrep/azvmcreate.txt"
     command = "chmod +x /home/dmitry/WorkDir/Workrep/cloud-init-jenkins.txt"
     command = "chmod +x /home/dmitry/WorkDir/Workrep/run.tf"
