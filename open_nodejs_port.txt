@@ -1,0 +1,1 @@
+az vm open-port --resource-group DmitrysGroup --name DmitrysVM --port 1338 --priority 1002
