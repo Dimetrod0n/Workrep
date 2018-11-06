@@ -17,6 +17,6 @@ runcmd:
   - sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
   - apt-get update && apt-get install jenkins -y
   - curl -sSL https://get.docker.com/ | sh
-  - usermod -aG docker azureuser
+  - usermod -aG docker dmitry
   - usermod -aG docker jenkins
   - service jenkins restart
