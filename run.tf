@@ -28,7 +28,7 @@ resource "azurerm_resource_group" "VM" {
   }
 
 #Open Jenkins port
-resource "azurerm_resource_group" "ports" {
+resource "azurerm_resource_group" "Jenkinsport" {
   name     = "DmitrysGroup"
   location = "eastus"
   provisioner "local-exec" {
@@ -37,7 +37,7 @@ resource "azurerm_resource_group" "ports" {
   }
 
 #Open Node.js port
-resource "azurerm_resource_group" "ports" {
+resource "azurerm_resource_group" "Nodejsport" {
   name     = "DmitrysGroup"
   location = "eastus"
   provisioner "local-exec" {
