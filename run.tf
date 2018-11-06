@@ -7,8 +7,8 @@ provider "azurerm" {
 
 # Copies files to WorkDir
   provisioner "file" {
-    source      = "/home/dmitry/WorkDir/Workrep/Dockerfile"
-    destination = "/home/dmitry/WorkDir/Dockerfile"
+    source      = "/home/dmitry/WorkDir/Workrep/run.tf"
+    destination = "/home/dmitry/WorkDir/run.tf"
   }
 
   provisioner "file" {
@@ -31,7 +31,7 @@ provider "azurerm" {
   provisioner "local-exec" {
     command = "chmod +x /home/dmitry/WorkDir/azvmcreate.txt",
 	      "chmod +x /home/dmitry/WorkDir/cloud-init-jenkins.txt",
-	      "chmod +x /home/dmitry/WorkDir/Dockerfile",
+	      "chmod +x /home/dmitry/WorkDir/run.tf",
 	      "chmod +x /home/dmitry/WorkDir/open_ports.txt"
   }
 
