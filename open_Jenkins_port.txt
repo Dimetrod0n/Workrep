@@ -1,1 +1,0 @@
-az vm open-port --resource-group DmitrysGroup --name DmitrysVM --port 8081 --priority 1001
