@@ -12,7 +12,7 @@ provider "azurerm" {
 }
 
 # Give execute privilege
-resource "insatance" "my" {
+resource "insatance" "privs" {
   provisioner "local-exec" {
     command = "chmod +x /home/dmitry/WorkDir/azvmcreate.txt"
     command = "chmod +x /home/dmitry/WorkDir/cloud-init-jenkins.txt"
@@ -21,9 +21,8 @@ resource "insatance" "my" {
   }
 }
 
-
 #Create resource group
-resource "insatance" "my" {
+resource "insatance" "group" {
 resource "azurerm_resource_group" "myterraformgroup" {
     name     = "DmitrysGroup"
     location = "eastus"
@@ -31,14 +30,14 @@ resource "azurerm_resource_group" "myterraformgroup" {
 }
 
 #Create VM
-resource "insatance" "my" {
+resource "insatance" "VM" {
   provisioner "local-exec" {
     command = "./azvmcreate.txt"
    }
   }
 
 #Open ports
-resource "insatance" "my" {
+resource "insatance" "ports" {
   provisioner "local-exec" {
     command = "./open_ports.txt"
    }
