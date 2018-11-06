@@ -17,18 +17,6 @@ resource "azurerm_resource_group" "myterraformgroup" {
     location = "eastus"
  }
 
-# Give execute privilege
-resource "azurerm_resource_group" "privs" {
-  name     = "DmitrysGroup"
-  location = "eastus"
-  provisioner "local-exec" {
-    command = "sudo chmod +x /home/dmitry/WorkDir/Workrep/azvmcreate.txt"
-    command = "sudo chmod +x /home/dmitry/WorkDir/Workrep/cloud-init-jenkins.txt"
-    command = "sudo chmod +x /home/dmitry/WorkDir/Workrep/open_Jenkins_port.txt"
-    command = "sudo chmod +x /home/dmitry/WorkDir/Workrep/open_nodejs_port.txt"
-  }
-}
-
 
 #Create VM
 resource "azurerm_resource_group" "VM" {
