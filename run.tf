@@ -25,7 +25,8 @@ resource "azurerm_resource_group" "privs" {
     command = "chmod +x /home/dmitry/WorkDir/Workrep/azvmcreate.txt"
     command = "chmod +x /home/dmitry/WorkDir/Workrep/cloud-init-jenkins.txt"
     command = "chmod +x /home/dmitry/WorkDir/Workrep/run.tf"
-    command = "chmod +x /home/dmitry/WorkDir/Workrep/open_ports.txt"
+    command = "chmod +x /home/dmitry/WorkDir/Workrep/open_Jenkins_port.txt"
+    command = "chmod +x /home/dmitry/WorkDir/Workrep/open_nodejs_port.txt"
   }
 }
 
@@ -44,6 +45,7 @@ resource "azurerm_resource_group" "ports" {
   name     = "DmitrysGroup"
   location = "eastus"
   provisioner "local-exec" {
-    command = "./open_ports.txt"
+    command = "./open_Jenkins_port.txt"
+    command = "./open_nodejs_port.txt"
    }
   }
