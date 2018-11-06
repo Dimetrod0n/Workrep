@@ -32,7 +32,9 @@ resource "azurerm_resource_group" "ports" {
   name     = "DmitrysGroup"
   location = "eastus"
   provisioner "local-exec" {
-    command = "./open_Jenkins_port.txt"
-    command = "./open_nodejs_port.txt"
+    command = [
+        "./open_Jenkins_port.txt",
+        "./open_nodejs_port.txt"
+      ]
    }
   }
