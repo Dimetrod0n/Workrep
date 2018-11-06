@@ -1,9 +1,4 @@
-provider "azurerm" {
-    subscription_id = ""
-    client_id       = ""
-    client_secret   = ""
-    tenant_id       = ""
-}
+provider "azurerm" {}
 
 # Copies files to WorkDir
   provisioner "file" {
