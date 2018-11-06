@@ -1,8 +1,8 @@
 provider "azurerm" {
-    subscription_id = "01d76bd6-326c-4ba2-ba01-c32a9a2d3630"
-    client_id       = "c7703e3b-9001-461a-93a3-a696835b3026"
-    client_secret   = "b00894d2-c82d-467a-9eae-70e211882bfe"
-    tenant_id       = "756b2b5d-5add-4dc9-8be2-bfa1b1654864"
+    subscription_id = ""
+    client_id       = ""
+    client_secret   = ""
+    tenant_id       = ""
 }
 
 # Copies files to WorkDir
