@@ -16,10 +16,10 @@ resource "azurerm_resource_group" "privs" {
   name     = "DmitrysGroup"
   location = "eastus"
   provisioner "local-exec" {
-    command = "chmod +x /home/dmitry/WorkDir/azvmcreate.txt"
-    command = "chmod +x /home/dmitry/WorkDir/cloud-init-jenkins.txt"
-    command = "chmod +x /home/dmitry/WorkDir/run.tf"
-    command = "chmod +x /home/dmitry/WorkDir/open_ports.txt"
+    command = "chmod +x /home/dmitry/WorkDir/Workrep/azvmcreate.txt"
+    command = "chmod +x /home/dmitry/WorkDir/Workrep/cloud-init-jenkins.txt"
+    command = "chmod +x /home/dmitry/WorkDir/Workrep/run.tf"
+    command = "chmod +x /home/dmitry/WorkDir/Workrep/open_ports.txt"
   }
 }
 
