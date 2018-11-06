@@ -27,14 +27,20 @@ resource "azurerm_resource_group" "VM" {
    }
   }
 
-#Open ports
+#Open Jenkins port
 resource "azurerm_resource_group" "ports" {
   name     = "DmitrysGroup"
   location = "eastus"
   provisioner "local-exec" {
-    command = [
-        "./open_Jenkins_port.txt",
-        "./open_nodejs_port.txt"
-      ]
+    command = "./open_Jenkins_port.txt"
+   }
+  }
+
+#Open Node.js port
+resource "azurerm_resource_group" "ports" {
+  name     = "DmitrysGroup"
+  location = "eastus"
+  provisioner "local-exec" {
+    command = "./open_nodejs_port.txt"
    }
   }
