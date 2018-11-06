@@ -26,7 +26,6 @@ resource "azurerm_resource_group" "myterraformgroup" {
     name     = "DmitrysGroup"
     location = "eastus"
  }
-}
 
 #Create VM
 resource "azurerm_resource_group" "VM" {
