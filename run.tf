@@ -96,18 +96,18 @@ resource "azurerm_network_interface" "myterraformnic" {
 }
 
 #Generate randomId for next step
-resource "random_id" "randomId" {
-    keepers = {
-        # Generate a new ID only when a new resource group is defined
-        resource_group = "${azurerm_resource_group.myterraformgroup.name}"
-    }
-
-    byte_length = 8
-}
+#resource "random_id" "randomId" {
+#    keepers = {
+#        # Generate a new ID only when a new resource group is defined
+#       resource_group = "${azurerm_resource_group.myterraformgroup.name}"
+#    }
+#
+#    byte_length = 8
+#}
 
 #Create storage account
 resource "azurerm_storage_account" "mystorageaccount" {
-    name                = "dmitrysdiag${random_id.randomId.hex}"
+    name                = "dimetrod0n"
     resource_group_name = "${azurerm_resource_group.myterraformgroup.name}"
     location            = "eastus"
     account_replication_type = "LRS"
@@ -141,7 +141,7 @@ resource "azurerm_virtual_machine" "myterraformvm" {
     }
 
     os_profile {
-        computer_name  = "DmitrysVM"
+        computer_name  = "dmitrysvm"
         admin_username = "dmitry"
         admin_password = "or2cLe1!2e456I89"
     }
