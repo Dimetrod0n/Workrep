@@ -142,16 +142,13 @@ resource "azurerm_virtual_machine" "myterraformvm" {
     }
 
     os_profile {
-        computer_name  = "Dmitrysvm"
+        computer_name  = "DmitrysVM"
         admin_username = "dmitry"
-        admin_password = "Password1234!"
+        admin_password = "or2cLe1!2e456I89"
     }
 
     os_profile_linux_config {
         disable_password_authentication = false
-        ssh_keys {
-            path     = "/home/azureuser/.ssh/authorized_keys"
-            key_data = "ssh-rsa AAAAB3Nz{snip}hwhqT9h"
         }
     }
 
