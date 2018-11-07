@@ -21,7 +21,6 @@ resource "azurerm_resource_group" "myterraformgroup" {
 
  }
 
-
 #Create virtual network
 resource "azurerm_virtual_network" "myterraformnetwork" {
     name                = "DmitrysVnet"
@@ -33,7 +32,6 @@ resource "azurerm_virtual_network" "myterraformnetwork" {
         environment = "Terraform Demo"
     }
 }
-
 
 #Create subnet 
 resource "azurerm_subnet" "myterraformsubnet" {
@@ -77,6 +75,7 @@ resource "azurerm_network_security_group" "myterraformnsg" {
         environment = "Terraform Demo"
     }
 }
+
 #Create network interface
 resource "azurerm_network_interface" "myterraformnic" {
     name                = "DmitrysNIC"
