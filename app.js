@@ -2,7 +2,7 @@ var http = require("http");
 
 var server = http.createServer(function(request, response) {
 
-    response.end("It is finnaly working");
+    response.end("It is finally working");
 
 });
 
