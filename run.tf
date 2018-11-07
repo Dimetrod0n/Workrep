@@ -107,7 +107,7 @@ resource "random_id" "randomId" {
 
 #Create storage account
 resource "azurerm_storage_account" "mystorageaccount" {
-    name                = "Dmitrysdiag${random_id.randomId.hex}"
+    name                = "dmitrysdiag${random_id.randomId.hex}"
     resource_group_name = "${azurerm_resource_group.myterraformgroup.name}"
     location            = "eastus"
     account_replication_type = "LRS"
